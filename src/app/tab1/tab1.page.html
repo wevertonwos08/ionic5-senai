@@ -19,8 +19,16 @@
 
   <ion-list>
     <ion-item *ngFor="let partido of partidos ">
-      <ion-label>{{partido.nome}}</ion-label>
-      <ion-button color="success">Membros</ion-button>
+      <ion-label>{{partido.nome |formatarTextoMaiusculo}}</ion-label>
+      <ion-label
+        ><ion-button color="secondary"
+          >{{partido.sigla |formatarTextoMinusculo}}</ion-button
+        ></ion-label
+      >
+      <app-button-go-to-link
+        name="membros"
+        icon="people"
+      ></app-button-go-to-link>
     </ion-item>
   </ion-list>
 </ion-content>
