@@ -6,7 +6,7 @@
 
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title> Partidos </ion-title>
+    <ion-title appTextoAzul> Partidos </ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -28,6 +28,7 @@
       <app-button-go-to-link
         name="membros"
         icon="people"
+        [idPartido]="partido.id"
       ></app-button-go-to-link>
     </ion-item>
   </ion-list>
