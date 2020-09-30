@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>modal-deputado</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="fecharModal()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row *ngIf="finish" class="ion-align-items-center">
+    <ion-col>
+      <ion-card class="card">
+        <ion-avatar>
+          <img [src]="deputado.ultimoStatus.urlFoto" />
+        </ion-avatar>
+        <ion-card-header>
+          <ion-card-subtitle>{{deputado.ultimoStatus.nome}}</ion-card-subtitle>
+          <ion-card-title
+            >{{deputado.ultimoStatus.siglaPartido}}</ion-card-title
+          >
+        </ion-card-header>
+        <ion-card-content>
+          {{deputado.ultimoStatus.gabinete.email}}
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-content>
