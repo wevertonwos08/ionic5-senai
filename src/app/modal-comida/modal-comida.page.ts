@@ -29,8 +29,8 @@ export class ModalComidaPage implements OnInit {
   public fecharModal(): void {
     this.modal.dismiss();
   }
-  submitForm() {
+  async submitForm() {
     //console.log(this.form.value);
-    this.comida.salvarComida(this.form.value);
+    await this.comida.salvarComida(this.form.value);
   }
 }
